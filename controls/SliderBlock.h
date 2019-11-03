@@ -17,6 +17,7 @@ public:
         info.category << "General" << "Controls";
         info.helpText = "A simple slider that outputs a value between 0 and 1.";
         info.qmlFile = "qrc:/universal-blocks/controls/SliderBlock.qml";
+        info.orderHint = 0 + 100 + 1;
 		info.complete<SliderBlock>();
 		return info;
     }

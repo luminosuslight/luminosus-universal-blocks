@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/universal-blocks/">
+    <qresource prefix="/universal-blocks">
         <file>controls/SliderBlock.qml</file>
+        <file>content/NotesBlock.qml</file>
     </qresource>
 </RCC>

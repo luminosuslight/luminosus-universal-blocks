@@ -13,11 +13,11 @@ SliderBlock::SliderBlock(CoreController* controller, QString uid)
     m_heightIsResizable = true;
 }
 
-void SliderBlock::getAdditionalState(QJsonObject& state) const {
-    state["value"] = getValue();
+void SliderBlock::getAdditionalState(QCborMap& state) const {
+    state["value"_q] = getValue();
 }
 
-void SliderBlock::setAdditionalState(const QJsonObject &state) {
+void SliderBlock::setAdditionalState(const QCborMap &state) {
     setValue(state["value"].toDouble());
 }
 

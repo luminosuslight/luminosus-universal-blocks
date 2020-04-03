@@ -3,5 +3,13 @@
         <file>controls/SliderBlock.qml</file>
         <file>content/NotesBlock.qml</file>
         <file>content/ImageBlock.qml</file>
+        <file>inspection/ApplicationLogBlock.qml</file>
+        <file>inspection/DataInspectionBlock.qml</file>
+        <file>inspection/GuiEditorBlock.qml</file>
+        <file>inspection/PerformanceMonitorBlock.qml</file>
+        <file>inspection/SmokeTestBlock.qml</file>
+        <file>time/ClockBlock.qml</file>
+        <file>time/StopWatchBlock.qml</file>
+        <file>time/TimerBlock.qml</file>
     </qresource>
 </RCC>

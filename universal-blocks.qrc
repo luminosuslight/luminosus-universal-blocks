@@ -2,5 +2,6 @@
     <qresource prefix="/universal-blocks">
         <file>controls/SliderBlock.qml</file>
         <file>content/NotesBlock.qml</file>
+        <file>content/ImageBlock.qml</file>
     </qresource>
 </RCC>

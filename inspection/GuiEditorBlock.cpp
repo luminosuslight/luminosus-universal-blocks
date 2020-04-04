@@ -43,7 +43,6 @@ void GuiEditorBlock::onFocusChanged() {
         return;
     }
     QByteArray content = file.readAll();
-    qDebug() << qmlPath << content;
     file.close();
 
     m_code = QString::fromUtf8(content);

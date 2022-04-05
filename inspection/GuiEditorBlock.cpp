@@ -1,5 +1,7 @@
 #include "GuiEditorBlock.h"
 
+#include <QFile>
+
 #include "core/manager/BlockList.h"
 #include "core/manager/BlockManager.h"
 

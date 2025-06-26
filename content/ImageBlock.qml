@@ -1,5 +1,7 @@
+pragma ComponentBehavior: Bound
 import QtQuick 2.5
 import QtQuick.Dialogs
+import QtCore
 import CustomElements 1.0
 import "qrc:/core/ui/items"
 import "qrc:/core/ui/controls"
@@ -17,6 +19,8 @@ BlockBase {
     showShadows: !controller.anchorManager().presentationMode || block.attr("shadow").val
 
     z: -1  // always in background
+
+    required property var block
 
     StretchColumn {
         height: parent.height
@@ -121,12 +125,12 @@ BlockBase {
                     sourceComponent: FileDialog {
                         id: fileDialog
                         title: "Select Image File"
-                        folder: shortcuts.pictures
-                        selectMultiple: false
-                        nameFilters: "Image Files (*)"
+                        currentFolder: StandardPaths.writableLocation(StandardPaths.PicturesLocation)
+                        fileMode: FileDialog.OpenFile
+                        nameFilters: ["Image Files (*)"]
                         onAccepted: {
-                            if (fileUrl) {
-                                block.attr("filePath").val = fileUrl
+                            if (selectedFile) {
+                                root.block.attr("filePath").val = selectedFile
                             }
                             fileDialogLoader.active = false
                         }
